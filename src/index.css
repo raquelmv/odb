@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Akkurat mono';
+  src: local('Akkurat-Mono'), url(./fonts/Akkurat-Mono.otf) format('truetype');
+}
+
+p,a{
+  font-family: 'Akkurat mono';
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+a:hover{
+ opacity: 0.5;
+}
+.bible{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  padding:2rem;
+  background-color:rgba(0, 0, 0, 0.9);
+}
+.bible p{
+  text-align: start;
+  max-width: 30%;
+  padding-bottom:15px;
+}
+.nav-wrppr{
+  display: flex;
+}
+.inmatureTitle{
+  position:absolute;
+  right:calc( 50% - 124px);
+  top:50%;
+}
+@media screen and (max-width: 780px) {
+  .bible p{
+
+    max-width: 100%;
+  }
+}
