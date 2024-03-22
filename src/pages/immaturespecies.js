@@ -6,13 +6,14 @@ import imgThree from "../img/000001-05.png";
 import imgFour from "../img/00002.png";
 import imgFive from "../img/0003.png";
 import imgSix from "../img/00006.png";
+import logoInmature from "../img/PARED_ORION.png";
 
 const Inmature = () => {
     const [positions, setPositions] = useState([
         { x: 100, y: 0 }, // Initial position for image one
-        { x: 500, y: 0 }, // Initial position for image two
+        { x: 0, y: 0 }, // Initial position for image two
         { x: 300, y: 0 }, // Initial position for image three
-        { x: 700, y: 0 }, // Initial position for image four
+        { x: 200, y: 0 }, // Initial position for image four
         { x: 0, y: 0 }, // Initial position for image five
         { x: 0, y: 0 }, // Initial position for image six
     ]);
@@ -24,8 +25,8 @@ const Inmature = () => {
     };
 
     return (
-        <div>
-            <h1 className="inmatureTitle">Inmature species</h1>
+        <div className="is-wrapper">
+    <div className="inmatureTitle">        <img src={logoInmature}  className="logo" /></div>
             {positions.map((position, index) => (
                 <Draggable key={index} onStop={(e, ui) => onStop(index, e, ui)} position={position}>
                     <img src={getImageSource(index)} alt={`logo${index}`} className="logo" />

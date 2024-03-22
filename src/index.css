@@ -45,8 +45,12 @@ a:hover{
 }
 .inmatureTitle{
   position:absolute;
-  right:calc( 50% - 124px);
-  top:50%;
+  right:calc( 50% - 150px);
+  top:calc( 50% - 125px);
+}
+.is-wrapper{
+
+  background-color: #262626;
 }
 @media screen and (max-width: 780px) {
   .bible p{
