@@ -10,7 +10,7 @@ function App() {
           <Routes>
               <Route exact path='/' exact element={<Dashboard />} />
               <Route path='/data01' element={<Data01/>} />/>
-              <Route path='/inmaturespecies' element={<Inmature/>} />/>
+              <Route path='/immaturespecies' element={<Inmature/>} />/>
           </Routes>
       </Router>
 
