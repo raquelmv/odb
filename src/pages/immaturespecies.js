@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import Draggable from 'react-draggable';
-import imgOne from "../img/00001.png";
-import imgTwo from "../img/000001-03.png";
-import imgThree from "../img/000001-05.png";
-import imgFour from "../img/00002.png";
-import imgFive from "../img/0003.png";
-import imgSix from "../img/00006.png";
-import logoInmature from "../img/PARED_ORION.png";
+import imgOne from "../img/immpke.jpg";
+
+import logoInmature from "../img/logo_02_immsp.png";
 
 const Inmature = () => {
     const [positions, setPositions] = useState([
@@ -26,12 +22,18 @@ const Inmature = () => {
 
     return (
         <div className="is-wrapper">
-    <div className="inmatureTitle">        <img src={logoInmature}  className="logo" /></div>
+
+    <div className="inmatureTitle">
+        <img src={logoInmature}  className="logo" />
+    </div>
+
             {positions.map((position, index) => (
                 <Draggable key={index} onStop={(e, ui) => onStop(index, e, ui)} position={position}>
                     <img src={getImageSource(index)} alt={`logo${index}`} className="logo" />
                 </Draggable>
             ))}
+
+
         </div>
     );
 };
@@ -41,15 +43,15 @@ const getImageSource = (index) => {
         case 0:
             return imgOne;
         case 1:
-            return imgTwo;
+            return imgOne;
         case 2:
-            return imgThree;
+            return imgOne;
         case 3:
-            return imgFour;
+            return imgOne;
         case 4:
-            return imgFive;
+            return imgOne;
         case 5:
-            return imgSix;
+            return imgOne;
         default:
             return "";
     }
